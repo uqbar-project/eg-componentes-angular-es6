@@ -1,0 +1,16 @@
+<div class="panel panel-default">
+  <div class="panel-body">
+    <div ng-if="$ctrl.usuario.esMujer()">
+        <span class="glyphicon glyphicon-queen" aria-hidden="true" title="Mujer"></span>
+    </div>
+    <div ng-if="!$ctrl.usuario.esMujer()">
+        <span class="glyphicon glyphicon-king" aria-hidden="true" title="Hombre"></span>
+    </div>
+    <h4>
+        <span class="label label-{{$ctrl.usuarioClass}}">
+            {{$ctrl.usuario.nombre}}
+        </span>
+    </h4>
+    <div>{{$ctrl.usuario.fraseCabecera}}</div>
+  </div>
+</div>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css"
+		href="node_modules/bootstrap/dist/css/bootstrap.css">
+	<script src="node_modules/angular/angular.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="node_modules/angular-ui-bootstrap/ui-bootstrap-tpls.js"
+		type="text/javascript" charset="utf-8"></script>
+	<title>Componentes</title>
+</head>
+<body>
+	<div ng-app="componentesApp">
+		<div class="panel">
+			<h3>
+				<span class="label label-default">Ejemplo de un componente que muestra un usuario</span>
+			</h3>
+			<div ng-controller="UsuarioController as usuarioCtrl">
+				<div ng-repeat="usuario in usuarioCtrl.usuarios">
+					<usuario-viewer usuario="usuario"/>
+				</div>
+			</div>
+			</div>
+				<h3>
+					<span class="label label-default">Ejemplo de un componente que ingresa un n&uacute;mero entero</span>
+				</h3>
+				<div class="panel panel-default">
+					<div ng-controller="ContadorController as contadorCtrl">
+						<contador-spinner contador="contadorCtrl.contador"/>
+					</div>
+					<div ng-controller="ContadorController as contadorCtrl">
+						<contador-spinner contador="contadorCtrl.contador"/>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="js/domain/usuario.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/domain/contador.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/controller/usuario.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/controller/contador.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/components/usuarioViewer.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/components/contadorSpinner.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/app.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>
