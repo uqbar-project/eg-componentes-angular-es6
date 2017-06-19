@@ -1,16 +1,20 @@
 <div class="panel panel-default">
-  <div class="panel-body">
-    <div ng-if="$ctrl.usuario.esMujer()">
-        <span class="glyphicon glyphicon-queen" aria-hidden="true" title="Mujer"></span>
+  <div class="panel-body panel-heading">
+    <div class="col-md-1">
+        <div ng-if="$ctrl.usuario.esMujer()">
+            <h3 class="glyphicon glyphicon-queen" aria-hidden="true" title="Mujer"></h3>
+        </div>
+        <div ng-if="!$ctrl.usuario.esMujer()">
+            <h3 class="glyphicon glyphicon-king" aria-hidden="true" title="Hombre"></h3>
+        </div>
     </div>
-    <div ng-if="!$ctrl.usuario.esMujer()">
-        <span class="glyphicon glyphicon-king" aria-hidden="true" title="Hombre"></span>
+    <div class="col-md-11">
+        <h3>
+            <span class="label label-{{$ctrl.usuarioClass}}">
+                {{$ctrl.usuario.nombre}}
+            </span>
+        </h3>
+        <div>{{$ctrl.usuario.fraseCabecera}}</div>
     </div>
-    <h4>
-        <span class="label label-{{$ctrl.usuarioClass}}">
-            {{$ctrl.usuario.nombre}}
-        </span>
-    </h4>
-    <div>{{$ctrl.usuario.fraseCabecera}}</div>
   </div>
 </div>
